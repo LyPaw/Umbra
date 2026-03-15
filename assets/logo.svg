@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b026ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="hexClip">
+      <polygon points="100,10 175,52.5 175,147.5 100,190 25,147.5 25,52.5"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="100" cy="100" r="90" fill="url(#glowGrad)"/>
+
+  <!-- Outer hexagon border -->
+  <polygon points="100,12 174,54 174,146 100,188 26,146 26,54"
+           fill="none" stroke="#b026ff" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="100,30 158,63 158,130 100,163 42,130 42,63"
+           fill="#0f111a" stroke="#1f2230" stroke-width="1"/>
+
+  <!-- Scanning lines (atmosphere) -->
+  <g clip-path="url(#hexClip)" opacity="0.08">
+    <line x1="25" y1="70" x2="175" y2="70" stroke="#00ff41" stroke-width="0.5"/>
+    <line x1="25" y1="85" x2="175" y2="85" stroke="#00ff41" stroke-width="0.5"/>
+    <line x1="25" y1="100" x2="175" y2="100" stroke="#00ff41" stroke-width="0.5"/>
+    <line x1="25" y1="115" x2="175" y2="115" stroke="#00ff41" stroke-width="0.5"/>
+    <line x1="25" y1="130" x2="175" y2="130" stroke="#00ff41" stroke-width="0.5"/>
+  </g>
+
+  <!-- Center: U shape from "Umbra" stylized as a lock/cipher symbol -->
+  <!-- Lock body -->
+  <rect x="78" y="100" width="44" height="34" rx="3" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#greenGlow)"/>
+  <!-- Lock shackle -->
+  <path d="M88,100 L88,84 Q100,72 112,84 L112,100" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#greenGlow)"/>
+  <!-- Keyhole -->
+  <circle cx="100" cy="115" r="5" fill="#00ff41" opacity="0.9"/>
+  <rect x="97" y="115" width="6" height="10" rx="1" fill="#00ff41" opacity="0.9"/>
+
+  <!-- Corner accent brackets -->
+  <g stroke="#b026ff" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glow)">
+    <path d="M40,60 L40,50 L52,50"/>
+    <path d="M160,60 L160,50 L148,50"/>
+    <path d="M40,140 L40,150 L52,150"/>
+    <path d="M160,140 L160,150 L148,150"/>
+  </g>
+
+  <!-- Binary dots decoration -->
+  <g fill="#00ff41" opacity="0.5" font-size="7" font-family="Courier New">
+    <text x="30" y="100">1</text>
+    <text x="30" y="110">0</text>
+    <text x="162" y="100">0</text>
+    <text x="162" y="110">1</text>
+  </g>
+</svg>

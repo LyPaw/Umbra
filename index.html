@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Umbra — Universal Cryptography Decoder. Decrypt, encode, and hash with 30+ algorithms. No server. No tracking. 100% client-side.">
+  <meta name="keywords" content="cryptography, cipher, decoder, base64, caesar, vigenere, AES, SHA256, encryption, decryption">
+  <meta name="author" content="LyPaw">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Umbra — Universal Crypto Decoder">
+  <meta property="og:description" content="Decrypt, encode and hash with 30+ algorithms. Client-side, no data sent anywhere.">
+  <meta property="og:type" content="website">
+
+  <title>UMBRA // CRYPTO DECODER</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Stylesheet (includes Google Fonts import) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a class="nav-brand" href="#" onclick="return false;">
+      <img src="assets/logo.svg" alt="Umbra Logo">
+      <div>
+        <span class="nav-brand-text">UMBRA</span>
+        <span class="nav-brand-sub">CRYPTO DECODER v1.0</span>
+      </div>
+    </a>
+
+    <div class="nav-controls">
+      <div class="nav-status">
+        <div class="status-dot"></div>
+        <span>OFFLINE READY</span>
+      </div>
+
+      <button class="hamburger-btn" id="hamburger-btn" title="Toggle Sidebar" aria-label="Toggle Sidebar">
+        ☰
+      </button>
+
+      <button class="theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+        ☀️
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO BANNER ─────────────────────────────────────────── -->
+  <div id="hero">
+    <div class="hero-title">Universal Cryptography Decoder</div>
+    <div class="hero-subtitle">Classic Ciphers · Modern Encryption · Encoding Schemes · Hash Functions</div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">32+</span>
+        <span class="stat-label">ALGORITHMS</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">400+</span>
+        <span class="stat-label">BF COMBOS</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">CLIENT-SIDE</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">0</span>
+        <span class="stat-label">DATA SENT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BREADCRUMB ──────────────────────────────────────────── -->
+  <div class="breadcrumb" id="breadcrumb">umbra /</div>
+
+  <!-- ── MAIN LAYOUT ─────────────────────────────────────────── -->
+  <div id="main">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" role="navigation" aria-label="Algorithm list">
+      <!-- Built by ui.js -->
+    </aside>
+
+    <!-- WORKSPACE -->
+    <main id="workspace">
+      <!-- TABS BAR -->
+      <div id="tabs-bar" role="tablist" aria-label="Open tools">
+        <!-- Built by ui.js -->
+      </div>
+
+      <!-- TOOL PANEL -->
+      <div id="tool-panel" role="tabpanel">
+        <!-- Built by ui.js -->
+      </div>
+    </main>
+
+  </div><!-- /#main -->
+
+  <!-- ── HISTORY BAR ─────────────────────────────────────────── -->
+  <footer id="history-panel" aria-label="Operation history">
+    <!-- Built by ui.js -->
+  </footer>
+
+</div><!-- /#app -->
+
+<!-- ── TOAST CONTAINER ─────────────────────────────────────── -->
+<div id="toast-container" aria-live="polite"></div>
+
+<!-- ── SCRIPTS ─────────────────────────────────────────────── -->
+<script src="js/crypto.js"></script>
+<script src="js/bruteforce.js"></script>
+<script src="js/ui.js"></script>
+
+<!-- Keyboard shortcut hint in console -->
+<script>
+console.log('%cUMBRA CRYPTO DECODER', 'color:#00ff41;font-size:16px;font-weight:bold;font-family:monospace');
+console.log('%cKeyboard Shortcuts:', 'color:#b026ff');
+console.log('%c  Ctrl+K  → Focus algorithm search', 'color:#8a949e');
+console.log('%c  Ctrl+T  → Open Auto-Detect tab', 'color:#8a949e');
+console.log('%c  Ctrl+W  → Close active tab', 'color:#8a949e');
+console.log('%c  Ctrl+Enter → Run (inside input box)', 'color:#8a949e');
+console.log('%cAll processing is 100%% client-side. No data leaves your browser.', 'color:#00ff41');
+</script>
+
+</body>
+</html>
