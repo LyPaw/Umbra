@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.svg" width="100" height="100" alt="Umbra Logo">
+  <a href="https://lypaw.github.io/Umbra/"><img src="assets/logo.svg" width="100" height="100" alt="Umbra Logo"></a>
   <h1>UMBRA</h1>
   <p><strong>Universal Cryptography Decoder — All algorithms. One tool. Zero servers.</strong></p>
 
